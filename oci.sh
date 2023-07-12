@@ -39,6 +39,8 @@ sudo apt install php-pear
 echo 'install oci8'
 printf "\n" | sudo pecl install oci8
 
+sudo apt-get install libaio1 libaio-dev
+
 echo 'add oci8 extension to php.ini'
 sudo sh -c 'echo "extension=oci8.so" >> /etc/php/8.2/fpm/php.ini'
 sudo service php8.2-fpm restart
