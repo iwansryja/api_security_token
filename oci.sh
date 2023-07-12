@@ -56,7 +56,8 @@ wget -nv https://www.php.net/distributions/php-8.2.8.tar.gz
 tar xzf php-8.2.8.tar.gz
 cd php-8.2.8/ext/pdo_oci
 sudo phpize
-sudo ./configure --with-pdo-oci=instantclient,/usr,21
+##sudo ./configure --with-pdo-oci=instantclient,/usr,21
+sudo ./configure --with-pdo-oci=instantclient,/usr/lib/oracle/21/client64/lib,21
 sudo make 
 sudo make install
 
