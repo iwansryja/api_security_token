@@ -1,3 +1,22 @@
+##PHP 8.2
+
+sudo apt update && sudo apt -y upgrade
+sudo apt autoremove
+
+[ -f /var/run/reboot-required ] && sudo reboot -f
+
+sudo apt update
+sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+
+sudo apt install php8.2
+
+php --version
+
+sudo apt install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
+
 sudo apt-get update
 sudo apt-get install -y alien wget
 
