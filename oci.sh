@@ -22,6 +22,8 @@ sudo apt-get install -y alien wget
 
 wget -nv  https://download.oracle.com/otn_software/linux/instantclient/2110000/oracle-instantclient-devel-21.10.0.0.0-1.el8.x86_64.rpm
 wget -nv  https://download.oracle.com/otn_software/linux/instantclient/2110000/oracle-instantclient-basic-21.10.0.0.0-1.el8.x86_64.rpm
+wget -nv  https://download.oracle.com/otn_software/linux/instantclient/2110000/instantclient-sdk-linux.x64-21.10.0.0.0dbru.zip
+copy sdk ke /usr/lib/oracle/21/client64/
 
 sudo alien -i oracle-instantclient*-basic-*.rpm
 sudo alien -i oracle-instantclient*-devel-*.rpm
@@ -66,3 +68,6 @@ sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2/fpm/php.ini'
 sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2/cli/php.ini'
 sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2/apache2/php.ini'
 sudo service php8.2-fpm restart
+
+#jika tidak keluar 
+sudo reboot -i
