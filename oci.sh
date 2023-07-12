@@ -34,9 +34,9 @@ sudo sh -c 'echo "env[ORACLE_HOME] = /usr/lib/oracle/21/client64" >> /etc/php/8.
 sudo sh -c 'echo "env[LD_LIBRARY_PATH] = /usr/lib/oracle/21/client64/lib" >> /etc/php/8.2/fpm/pool.d/www.conf'
 sudo service php8.2-fpm restart
 
-sudo  sh -c 'echo "export LD_LIBRARY_PATH=/opt/oracle/instantclient_19_5" >> /etc/apache2/envvars'
-sudo  sh -c 'echo "export ORACLE_HOME=/opt/oracle/instantclient_19_5" >> /etc/apache2/envvars'
-sudo  sh -c 'echo "LD_LIBRARY_PATH=/opt/oracle/instantclient_19_5:$LD_LIBRARY_PATH" >> /etc/environment'
+sudo  sh -c 'echo "export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib" >> /etc/apache2/envvars'
+sudo  sh -c 'echo "export ORACLE_HOME=/usr/lib/oracle/21/client64" >> /etc/apache2/envvars'
+sudo  sh -c 'echo "LD_LIBRARY_PATH=usr/lib/oracle/21/client64/lib:$LD_LIBRARY_PATH" >> /etc/environment'
 
 sudo apt install php-pear 
 
