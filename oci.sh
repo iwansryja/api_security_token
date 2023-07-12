@@ -34,6 +34,8 @@ sudo sh -c 'echo "env[ORACLE_HOME] = /usr/lib/oracle/21/client64" >> /etc/php/8.
 sudo sh -c 'echo "env[LD_LIBRARY_PATH] = /usr/lib/oracle/21/client64/lib" >> /etc/php/8.2/fpm/pool.d/www.conf'
 sudo service php8.2-fpm restart
 
+sudo apt install php-pear 
+
 echo 'install oci8'
 printf "\n" | sudo pecl install oci8
 
