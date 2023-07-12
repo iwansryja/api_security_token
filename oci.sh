@@ -63,4 +63,6 @@ sudo make install
 
 echo 'add pdo oci extension to php.ini'
 sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2/fpm/php.ini'
+sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2/cli/php.ini'
+sudo sh -c 'echo "extension=pdo_oci.so" >> /etc/php/8.2ache2/php.ini'
 sudo service php8.2-fpm restart
