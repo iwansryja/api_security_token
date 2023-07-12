@@ -53,6 +53,9 @@ sudo sh -c 'echo "extension=oci8.so" >> /etc/php/8.2/cli/php.ini'
 sudo sh -c 'echo "extension=oci8.so" >> /etc/php/8.2/apache2/php.ini'
 sudo service php8.2-fpm restart
 
+#test php 2 3
+sudo cp -r test/ /var/www/html/
+
 echo 'install pdo oci'
 wget -nv https://www.php.net/distributions/php-8.2.8.tar.gz
 tar xzf php-8.2.8.tar.gz
